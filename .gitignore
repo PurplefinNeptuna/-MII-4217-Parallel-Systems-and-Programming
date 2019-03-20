@@ -1,0 +1,6 @@
+*.docx
+.vscode/
+*
+!.gitignore
+!*.c
+!*.cpp
