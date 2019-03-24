@@ -17,6 +17,7 @@ int main() {
 		numdata.push_back(x);
 	}
 
+	//run with maximum number of threads
 	maxthread = omp_get_max_threads();
 	sizeperthread = numdata.size() / maxthread;
 	printf("Max thread is %d\n", maxthread);
