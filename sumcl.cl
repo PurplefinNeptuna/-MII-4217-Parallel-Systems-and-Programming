@@ -1,5 +1,7 @@
 kernel void simple_add(global const int* A, global const uint* B, global int* C){
-	int workid = get_global_id(0);
+	uint workid = get_global_id(0);
+	if(workid >= (*B))
+		return;
 	int worksize = (*B) / get_global_size(0);
 	int startpos = workid * worksize;
 	int endpos = startpos + worksize;
